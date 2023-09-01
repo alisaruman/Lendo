@@ -4,7 +4,7 @@ $(document).ready(function () {
     var swiper = new Swiper("#main-swiper", {
       spaceBetween: 12,
       autoplay: {
-        delay: 4500,
+        delay: 3500,
         disableOnInteraction: false,
       },
       loop: true,
