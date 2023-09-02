@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/global/favicon.png" />
+    <link rel="apple-touch-icon" href="images/global/favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="style.css" rel="stylesheet" />
+    <title>لندو</title>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightGreen: 'rgba(10, 201, 116, 0.1)',
+                        light1: '#f7f9fe',
+                        light2: '#ddd',
+                        light3: '#e7e7e7',
+                        light4: '#f6f6f6',
+                        light5: '#f7f9fe',
+                        dark1: 'rgba(0, 0, 0, 0.20)',
+                        gray1: '#eaeaea',
+                        gray2: '#868686',
+                        gray3: '#606060',
+                        gray4: '#eee',
+                        primary: '#0ac974',
+                        secondary: '#0b2c6e',
+                        green2: '#018d4f',
+                        green3: '#00c06b',
+                    },
+                    container: {
+                        center: true,
+                    },
+                    fontFamily: {
+                        vazir: ["vazir", "sans-serif"],
+                        extra: ["vazirBold", "sans-serif"],
+                    },
+                    borderRadius: {
+                        '10': '10px',
+                    },
+                    boxShadow: {
+                        'main': '0px 4px 21px -9px rgba(0, 0, 0, 0.14)',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-vazir m-0 p-0 bg-light1" dir="rtl">
+
+    <!-- header -->
+    <header>
+        <div class="container">
+
+            <div class="first-part w-full flex items-center justify-between lg:justify-center py-8">
+                <a href="#" title="لندو">
+                    <img src="images/global/logo.png" alt="لندو" title="لندو" class="w-32 h-auto" />
+                </a>
+                <!-- mobile hamburger -->
+                <div id="hamburger" class="block lg:hidden cursor-pointer z-50">
+                    <div class="dash1 w-7 h-1 bg-secondary my-1 duration-500 rounded"></div>
+                    <div class="dash2 w-7 h-1 bg-secondary my-1 duration-500 rounded"></div>
+                    <div class="dash3 w-7 h-1 bg-secondary my-1 duration-500 rounded"></div>
+                </div>
+                <!-- mobile hamburger -->
+
+                <!-- mobile menu -->
+                <div id="mobile-menu"
+                    class="fixed lg:hidden py-5 px-3 top-0 invisible -right-full opacity-0 w-9/12 bg-secondary h-full z-30 duration-500 after:fixed after:w-3/12 after:h-full after:top-0 after:left-0 after:duration-100 after:backdrop-blur">
+                    <div class="searchbox relative w-full border border-primary p-3 rounded-10">
+                        <form>
+                            <input type="text" name="s" id="s"
+                                class="w-full border-0 placeholder-gray2 text-sm bg-transparent text-light1"
+                                placeholder="جستجو ...">
+                        </form>
+                    </div>
+
+                    <nav class="w-full py-5">
+                        <ul class="list-none flex flex-col">
+
+                            <li class="py-3">
+                                <a href="#" class="flex items-center gap-2">
+                                    <i class="icon-calendar2 w-6 h-6 brightness-100 invert"></i>
+                                    <span class="text-white text-sm">راهنمای خرید اقساطی</span>
+                                </a>
+                            </li>
+                            <li class="py-3">
+                                <a href="#" class="flex items-center gap-2">
+                                    <i class="icon-umbrella w-6 h-6 brightness-100 invert"></i>
+                                    <span class="text-white text-sm">بیمه</span>
+                                </a>
+                            </li>
+                            <li class="py-3 menu-item-has-children">
+                                <a href="#" class="flex items-center gap-2">
+                                    <i class="icon-bank w-6 h-6 brightness-100 invert"></i>
+                                    <span class="text-white text-sm flex items-center gap-2">وام و خدمات
+                                        بانکی</span>
+                                </a>
+                                <ul
+                                    class="sub-menu w-full text-white text-sm leading-9 rounded-10 bg-dark1 px-3 invisible max-h-0 opacity-0 duration-300">
+                                    <li>
+                                        <a href="#" class="duration-200">وام بدون ضامن</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="duration-200">وام بدون ضامن</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="duration-200">وام بدون ضامن</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="duration-200">وام بدون ضامن</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="duration-200">وام بدون ضامن</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-3">
+                                <a href="#" class="flex items-center gap-2">
+                                    <i class="icon-wallet w-6 h-6 brightness-100 invert"></i>
+                                    <span class="text-white text-sm">پس‌انداز و سرمایه‌گذاری</span>
+                                </a>
+                            </li>
+                            <li class="py-3">
+                                <a href="#" class="flex items-center gap-2">
+                                    <i class="icon-book w-6 h-6 brightness-100 invert"></i>
+                                    <span class="text-white text-sm">اخبار لندو</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                    <div class="w-full">
+                        <a href="#"
+                            class="flex items-center justify-center gap-2 bg-gradient-to-tr from-green2 to-green3 p-2 rounded-10 text-white text-sm">
+                            <div class="relative flex items-center justify-center w-8 h-8 bg-white rounded-full">
+                                <i class="icon-progressbar inline-flex w-5 h-5"></i>
+                                <span
+                                    class="absolute text-green2 text-[10px] font-extra top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">۲۰</span>
+                            </div>
+                            ثبت‌نام وام ۲۰ میلیونی
+                        </a>
+                    </div>
+
+                </div>
+                <!-- mobile menu -->
+            </div>
+
+            <div class="hidden lg:block second-part p-4 rounded-10 shadow-main" id="archive-nav">
+                <div class="w-full flex items-center lg:gap-8 xl:gap-12 2xl:gap-16">
+                    <div class="w-10/12">
+                        <nav class="w-full">
+                            <ul class="list-none flex items-center justify-between">
+
+                                <li>
+                                    <a href="#"
+                                        class="flex group items-center gap-2 py-1 px-3 rounded-10 duration-200 hover:bg-secondary">
+                                        <i class="icon-calendar2 w-6 h-6 duration-200 group-hover:invert"></i>
+                                        <span class="text-black text-sm duration-200 group-hover:text-white">راهنمای
+                                            خرید اقساطی</span>
+                                    </a>
+                                </li>
+                                <li class="py-1 px-3 group rounded-10 duration-200 hover:bg-secondary">
+                                    <a href="#" class="flex items-center gap-2">
+                                        <i class="icon-umbrella w-6 h-6 duration-200 group-hover:invert"></i>
+                                        <span class="text-black text-sm duration-200 group-hover:text-white">بیمه</span>
+                                    </a>
+                                </li>
+                                <li class="group menu-item-has-children">
+                                    <a href="#"
+                                        class="flex group items-center gap-2 py-1 px-3 rounded-10 duration-200 hover:bg-secondary">
+                                        <i class="icon-bank w-6 h-6 duration-200 group-hover:invert"></i>
+                                        <span
+                                            class="text-black text-sm duration-200 group-hover:text-white flex items-center gap-2">وام
+                                            و خدمات
+                                            بانکی</span>
+                                    </a>
+                                    <ul
+                                        class="sub-menu absolute opacity-0 group-hover:opacity-100 invisible group-hover:visible top-[175%] duration-300 group-hover:top-[120%] right-0 z-10 py-2 px-4 min-w-[230px] text-black text-sm leading-9 rounded-10 bg-white shadow-main">
+                                        <li>
+                                            <a href="#" class="duration-200 hover:text-primary">وام بدون ضامن</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="duration-200 hover:text-primary">وام بدون ضامن</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="duration-200 hover:text-primary">وام بدون ضامن</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="duration-200 hover:text-primary">وام بدون ضامن</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="duration-200 hover:text-primary">وام بدون ضامن</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex group items-center gap-2 py-1 px-3 rounded-10 duration-200 hover:bg-secondary">
+                                        <i class="icon-wallet w-6 h-6 duration-200 group-hover:invert"></i>
+                                        <span class="text-black text-sm duration-200 group-hover:text-white">پس‌انداز و
+                                            سرمایه‌گذاری</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex group items-center gap-2 py-1 px-3 rounded-10 duration-200 hover:bg-secondary">
+                                        <i class="icon-book w-6 h-6 duration-200 group-hover:invert"></i>
+                                        <span class="text-black text-sm duration-200 group-hover:text-white">اخبار
+                                            لندو</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="hidden lg:block searchbox relative w-2/12 border-r border-light2">
+                        <form>
+                            <input type="text" name="s" id="s"
+                                class="w-full border-0 py-1 pl-3 pr-10 placeholder-gray2 text-sm bg-transparent text-secondary"
+                                placeholder="جستجو ...">
+                            <i class="icon-search w-5 h-5 absolute top-1/2 right-3 -translate-y-1/2"></i>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- archive banner -->
+    <section id="archive-banner" class="pt-6">
+        <div class="container">
+            <a href="#" target="_blank" rel="nofollow noopener">
+                <img src="images/temp/wide-banner2.jpg" alt="بنر" class="w-full h-auto" />
+            </a>
+        </div>
+    </section>
+    <!-- archive banner -->
+
+    <!-- slider -->
+    <section id="slider" class="py-6">
+        <div class="container">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-5 lg:gap-3">
+                <div class="col-span-3">
+
+                    <div class="w-full rounded-10 overflow-hidden bg-white shadow-main mb-4 md:mb-0">
+
+                        <div class="item group relative rounded-10 overflow-hidden">
+                            <a href="#">
+                                <img src="images/temp/big-post1.png" alt="پست اول"
+                                    class="w-full h-auto duration-200 group-hover:brightness-50">
+                                <div
+                                    class="content w-full absolute bottom-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
+                                    <h3 class="text-white text-sm md:text-xl font-extra mt-3">
+                                        معرفی بهترین وام آنلاین که از هر کجای ایران قابل دسترس است!
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="content py-4 px-6">
+                            <div class="w-full flex flex-col md:flex-row gap-7 md:gap-0 items-center justify-between">
+                                <div class="author flex items-center gap-2 lg:gap-4">
+                                    <img src="images/temp/author.png" alt="نویسنده" class="w-10 h-10 rounded-10">
+                                    <div class="flex flex-col">
+                                        <span class="text-gray3 text-sm">توسط حمید راد</span>
+                                        <span class="text-gray2 text-xs">در 20 تیر 1402 </span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 lg:gap-3 text-gray2">
+                                    <div class="flex items-center gap-1">
+                                        <i class="icon-hourglass w-3 h-3"></i>
+                                        <span class="text-sm">مطالعه: 4 دقیقه</span>
+                                    </div>
+                                    <div class="w-0 h-4 border-r border-gray1"></div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="icon-comment w-3 h-3"></i>
+                                        <span class="text-sm">۱ دیدگاه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-span-1 grid gap-3">
+                    <div class="item group relative rounded-10 overflow-hidden">
+                        <a href="#">
+                            <img src="images/temp/post1.png" alt="پست اول"
+                                class="w-full h-auto duration-200 group-hover:brightness-50">
+                            <div
+                                class="content w-full absolute bottom-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
+                                <h3 class="text-white text-sm font-extra mt-3">بدون چک و ضامن، در همه شهرهای ایران وام
+                                    عمل بینی بگیرید! (جزئیات و درخواست وام)</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item group relative rounded-10 overflow-hidden">
+                        <a href="#">
+                            <img src="images/temp/post2.png" alt="پست اول"
+                                class="w-full h-auto duration-200 group-hover:brightness-50">
+                            <div
+                                class="content w-full absolute bottom-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
+                                <h3 class="text-white text-sm font-extra mt-3">بدون چک و ضامن، در همه شهرهای ایران وام
+                                    عمل بینی بگیرید! (جزئیات و درخواست وام)</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-1 grid gap-3">
+                    <div class="item group relative rounded-10 overflow-hidden">
+                        <a href="#">
+                            <img src="images/temp/post3.png" alt="پست اول"
+                                class="w-full h-auto duration-200 group-hover:brightness-50">
+                            <div
+                                class="content w-full absolute bottom-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
+                                <h3 class="text-white text-sm font-extra mt-3">بدون چک و ضامن، در همه شهرهای ایران وام
+                                    عمل بینی بگیرید! (جزئیات و درخواست وام)</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item group relative rounded-10 overflow-hidden">
+                        <a href="#">
+                            <img src="images/temp/post2.png" alt="پست اول"
+                                class="w-full h-auto duration-200 group-hover:brightness-50">
+                            <div
+                                class="content w-full absolute bottom-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
+                                <h3 class="text-white text-sm font-extra mt-3">بدون چک و ضامن، در همه شهرهای ایران وام
+                                    عمل بینی بگیرید! (جزئیات و درخواست وام)</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- slider -->
+
+    <!-- top invests -->
+    <section id="popular-titles">
+        <div class="container">
+            <div class="main-title pt-9 pb-3 w-full flex items-center">
+                <i class="icon-blue-pattern w-4 h-4"></i>
+                <h3 class="text-secondary font-extra text-base lg:text-xl pr-2">منتخب پس انداز و سرمایه‌گذاری</h3>
+            </div>
+            <div class="swiper mySwiper circle-swiper outside lg:px-5 lg:-mx-5 width-fixer" id="popular-swiper">
+                <div class="swiper-wrapper pb-16">
+
+                    <div class="swiper-slide">
+                        <div class="item w-full bg-white rounded-10 border border-gray1 shadow-main p-3">
+                            <a href="#" title="پست اول">
+                                <img src="images/temp/post1.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                            </a>
+                            <div class="flex items-center gap-3 py-3">
+                                <a href="#">
+                                    <span class="text-green2 text-xs py-1 px-3 rounded-10 bg-lightGreen">وام
+                                        بانکی</span>
+                                </a>
+                                <div class="flex items-center gap-1">
+                                    <i class="icon-hourglass w-3 h-3"></i>
+                                    <span class="text-xs lg:text-sm text-gray2">مطالعه: 4 دقیقه</span>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <h3 class="font-extra text-black text-sm lg:text-xl duration-200 hover:text-secondary">
+                                    معرفی بهترین وام آنلاین که از هر کجای ایران قابل دسترس است!
+                                </h3>
+                            </a>
+                            <p class="line-clamp-2 text-gray3 text-sm py-3">
+                                همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار است که متقاضیان امکان انجام
+                                آن‌ها را نخواهند داشت...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item w-full bg-white rounded-10 border border-gray1 shadow-main p-3">
+                            <a href="#" title="پست اول">
+                                <img src="images/temp/post2.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                            </a>
+                            <div class="flex items-center gap-3 py-3">
+                                <a href="#">
+                                    <span class="text-green2 text-xs py-1 px-3 rounded-10 bg-lightGreen">وام
+                                        بانکی</span>
+                                </a>
+                                <div class="flex items-center gap-1">
+                                    <i class="icon-hourglass w-3 h-3"></i>
+                                    <span class="text-xs lg:text-sm text-gray2">مطالعه: 4 دقیقه</span>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <h3 class="font-extra text-black text-sm lg:text-xl duration-200 hover:text-secondary">
+                                    معرفی بهترین وام آنلاین که از هر کجای ایران قابل دسترس است!
+                                </h3>
+                            </a>
+                            <p class="line-clamp-2 text-gray3 text-sm py-3">
+                                همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار است که متقاضیان امکان انجام
+                                آن‌ها را نخواهند داشت...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item w-full bg-white rounded-10 border border-gray1 shadow-main p-3">
+                            <a href="#" title="پست اول">
+                                <img src="images/temp/post3.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                            </a>
+                            <div class="flex items-center gap-3 py-3">
+                                <a href="#">
+                                    <span class="text-green2 text-xs py-1 px-3 rounded-10 bg-lightGreen">وام
+                                        بانکی</span>
+                                </a>
+                                <div class="flex items-center gap-1">
+                                    <i class="icon-hourglass w-3 h-3"></i>
+                                    <span class="text-xs lg:text-sm text-gray2">مطالعه: 4 دقیقه</span>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <h3 class="font-extra text-black text-sm lg:text-xl duration-200 hover:text-secondary">
+                                    معرفی بهترین وام آنلاین که از هر کجای ایران قابل دسترس است!
+                                </h3>
+                            </a>
+                            <p class="line-clamp-2 text-gray3 text-sm py-3">
+                                همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار است که متقاضیان امکان انجام
+                                آن‌ها را نخواهند داشت...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item w-full bg-white rounded-10 border border-gray1 shadow-main p-3">
+                            <a href="#" title="پست اول">
+                                <img src="images/temp/post1.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                            </a>
+                            <div class="flex items-center gap-3 py-3">
+                                <a href="#">
+                                    <span class="text-green2 text-xs py-1 px-3 rounded-10 bg-lightGreen">وام
+                                        بانکی</span>
+                                </a>
+                                <div class="flex items-center gap-1">
+                                    <i class="icon-hourglass w-3 h-3"></i>
+                                    <span class="text-xs lg:text-sm text-gray2">مطالعه: 4 دقیقه</span>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <h3 class="font-extra text-black text-sm lg:text-xl duration-200 hover:text-secondary">
+                                    معرفی بهترین وام آنلاین که از هر کجای ایران قابل دسترس است!
+                                </h3>
+                            </a>
+                            <p class="line-clamp-2 text-gray3 text-sm py-3">
+                                همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار است که متقاضیان امکان انجام
+                                آن‌ها را نخواهند داشت...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item w-full bg-white rounded-10 border border-gray1 shadow-main p-3">
+                            <a href="#" title="پست اول">
+                                <img src="images/temp/post2.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                            </a>
+                            <div class="flex items-center gap-3 py-3">
+                                <a href="#">
+                                    <span class="text-green2 text-xs py-1 px-3 rounded-10 bg-lightGreen">وام
+                                        بانکی</span>
+                                </a>
+                                <div class="flex items-center gap-1">
+                                    <i class="icon-hourglass w-3 h-3"></i>
+                                    <span class="text-xs lg:text-sm text-gray2">مطالعه: 4 دقیقه</span>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <h3 class="font-extra text-black text-sm lg:text-xl duration-200 hover:text-secondary">
+                                    معرفی بهترین وام آنلاین که از هر کجای ایران قابل دسترس است!
+                                </h3>
+                            </a>
+                            <p class="line-clamp-2 text-gray3 text-sm py-3">
+                                همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار است که متقاضیان امکان انجام
+                                آن‌ها را نخواهند داشت...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- top invests -->
+
+    <!-- main posts -->
+    <section id="main-posts" class="pt-9">
+        <div class="container">
+            <div class="w-full flex flex-col lg:flex-row lg:gap-7">
+
+                <div class="w-full lg:w-8/12 lg:w-9/12">
+
+                    <!-- rent guide -->
+                    <div class="main-title pt-6 pb-3 w-full flex items-center">
+                        <i class="icon-blue-pattern w-4 h-4"></i>
+                        <h3 class="text-secondary font-extra text-base lg:text-xl pr-2">جدیدترین مطالب پس انداز و
+                            سرمایه‌گذاری</h3>
+                    </div>
+                    <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
+
+                        <div class="w-full">
+                            <div class="item w-full bg-white rounded-10 shadow-main p-3">
+                                <a href="#" title="پست اول">
+                                    <img src="images/temp/post1.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                                </a>
+                                <a href="#">
+                                    <h3
+                                        class="lg:line-clamp-2 lg:h-14 font-extra text-black text-sm pt-3 duration-200 hover:text-secondary">
+                                        خرید قسطی بیمه شخص ثالث بدون چک
+                                    </h3>
+                                </a>
+                                <p class="line-clamp-2 h-14 text-gray3 text-sm py-3">
+                                    همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار را نخواهند داشت...
+                                </p>
+                                <div class="flex items-center gap-5 text-gray2">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-calendar3 w-3 h-3"></i>
+                                        <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-comment w-3 h-3"></i>
+                                        <span class="text-sm">۱ دیدگاه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="item w-full bg-white rounded-10 shadow-main p-3">
+                                <a href="#" title="پست اول">
+                                    <img src="images/temp/post2.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                                </a>
+                                <a href="#">
+                                    <h3
+                                        class="lg:line-clamp-2 lg:h-14 font-extra text-black text-sm pt-3 duration-200 hover:text-secondary">
+                                        خرید قسطی بیمه شخص ثالث بدون چک
+                                    </h3>
+                                </a>
+                                <p class="line-clamp-2 h-14 text-gray3 text-sm py-3">
+                                    همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار را نخواهند داشت...
+                                </p>
+                                <div class="flex items-center gap-5 text-gray2">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-calendar3 w-3 h-3"></i>
+                                        <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-comment w-3 h-3"></i>
+                                        <span class="text-sm">۱ دیدگاه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="item w-full bg-white rounded-10 shadow-main p-3">
+                                <a href="#" title="پست اول">
+                                    <img src="images/temp/post3.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                                </a>
+                                <a href="#">
+                                    <h3
+                                        class="lg:line-clamp-2 lg:h-14 font-extra text-black text-sm pt-3 duration-200 hover:text-secondary">
+                                        خرید قسطی بیمه شخص ثالث بدون چک
+                                    </h3>
+                                </a>
+                                <p class="line-clamp-2 h-14 text-gray3 text-sm py-3">
+                                    همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار را نخواهند داشت...
+                                </p>
+                                <div class="flex items-center gap-5 text-gray2">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-calendar3 w-3 h-3"></i>
+                                        <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-comment w-3 h-3"></i>
+                                        <span class="text-sm">۱ دیدگاه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="item w-full bg-white rounded-10 shadow-main p-3">
+                                <a href="#" title="پست اول">
+                                    <img src="images/temp/post2.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                                </a>
+                                <a href="#">
+                                    <h3
+                                        class="lg:line-clamp-2 lg:h-14 font-extra text-black text-sm pt-3 duration-200 hover:text-secondary">
+                                        خرید قسطی بیمه شخص ثالث بدون چک
+                                    </h3>
+                                </a>
+                                <p class="line-clamp-2 h-14 text-gray3 text-sm py-3">
+                                    همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار را نخواهند داشت...
+                                </p>
+                                <div class="flex items-center gap-5 text-gray2">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-calendar3 w-3 h-3"></i>
+                                        <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-comment w-3 h-3"></i>
+                                        <span class="text-sm">۱ دیدگاه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="item w-full bg-white rounded-10 shadow-main p-3">
+                                <a href="#" title="پست اول">
+                                    <img src="images/temp/post3.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                                </a>
+                                <a href="#">
+                                    <h3
+                                        class="lg:line-clamp-2 lg:h-14 font-extra text-black text-sm pt-3 duration-200 hover:text-secondary">
+                                        خرید قسطی بیمه شخص ثالث بدون چک
+                                    </h3>
+                                </a>
+                                <p class="line-clamp-2 h-14 text-gray3 text-sm py-3">
+                                    همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار را نخواهند داشت...
+                                </p>
+                                <div class="flex items-center gap-5 text-gray2">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-calendar3 w-3 h-3"></i>
+                                        <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-comment w-3 h-3"></i>
+                                        <span class="text-sm">۱ دیدگاه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="item w-full bg-white rounded-10 shadow-main p-3">
+                                <a href="#" title="پست اول">
+                                    <img src="images/temp/post1.png" alt="پست اول" class="w-full h-auto rounded-10" />
+                                </a>
+                                <a href="#">
+                                    <h3
+                                        class="lg:line-clamp-2 lg:h-14 font-extra text-black text-sm pt-3 duration-200 hover:text-secondary">
+                                        خرید قسطی بیمه شخص ثالث بدون چک
+                                    </h3>
+                                </a>
+                                <p class="line-clamp-2 h-14 text-gray3 text-sm py-3">
+                                    همان طور که می‌دانید شرایط دریافت وام گاهی آنقدر دشوار را نخواهند داشت...
+                                </p>
+                                <div class="flex items-center gap-5 text-gray2">
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-calendar3 w-3 h-3"></i>
+                                        <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="icon-comment w-3 h-3"></i>
+                                        <span class="text-sm">۱ دیدگاه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="pagination"
+                        class="w-full p-5 flex flex-wrap lg:flex-nowrap items-center justify-center gap-3 lg:gap-5 bg-white rounded-10 shadow-main mt-6">
+                        <a href="#" class="flex items-center gap-2">
+                            <i class="icon-left-arrow w-4 h-4 rotate-180"></i>
+                            <span class="text-sm text-gray3">قبلی</span>
+                        </a>
+                        <ul class="px-3 flex items-center border-l border-r border-gray1 gap-2 text-gray3 text-sm">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۱</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۲</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۳</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۴</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۵</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۶</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="flex items-center gap-2">
+                            <span class="text-sm text-gray3">بعدی</span>
+                            <i class="icon-left-arrow w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- rent guide -->
+                </div>
+
+                <div class="w-full lg:w-4/12 lg:w-3/12">
+                    <div class="sticky top-3">
+                        <!-- rents -->
+                        <div class="main-title pt-9 lg:pt-6 pb-3 w-full flex items-center">
+                            <i class="icon-blue-pattern w-4 h-4"></i>
+                            <h3 class="text-secondary font-extra text-base lg:text-xl pr-2">انواع وام</h3>
+                        </div>
+                        <div class="w-full rounded-10 bg-white shadow-main mb-5">
+                            <ul class="m-0 p-0 list-none">
+
+                                <li class="group py-5 px-3 flex border-b border-gray4 last:border-0">
+                                    <a href="#" class="w-3/12">
+                                        <img src="images/temp/circle-post.png" alt="پست اول"
+                                            class="w-16 h-16 rounded-full duration-200 group-hover:brightness-50" />
+                                    </a>
+                                    <div class="content w-9/12">
+                                        <a href="#" title=" و ضامن  و ضامن">
+                                            <h3
+                                                class="line-clamp-3 text-black text-sm duration-200 group-hover:text-secondary">
+                                                بدون چک و ضامن و ضامن و ضامن و ضامن و ضامن، در همه شهرهای ایران وام عمل
+                                                بینی
+                                                بگیرید!
+                                            </h3>
+                                        </a>
+                                        <div class="flex items-center gap-2 text-gray2 pt-1">
+                                            <i class="icon-calendar3 w-3 h-3"></i>
+                                            <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="group py-5 px-3 flex border-b border-gray4 last:border-0">
+                                    <a href="#" class="w-3/12">
+                                        <img src="images/temp/circle-post.png" alt="پست اول"
+                                            class="w-16 h-16 rounded-full duration-200 group-hover:brightness-50" />
+                                    </a>
+                                    <div class="content w-9/12">
+                                        <a href="#" title=" و ضامن  و ضامن">
+                                            <h3
+                                                class="line-clamp-3 text-black text-sm duration-200 group-hover:text-secondary">
+                                                بدون چک و ضامن و ضامن و ضامن و ضامن و ضامن، در همه شهرهای ایران وام عمل
+                                                بینی
+                                                بگیرید!
+                                            </h3>
+                                        </a>
+                                        <div class="flex items-center gap-2 text-gray2 pt-1">
+                                            <i class="icon-calendar3 w-3 h-3"></i>
+                                            <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="group py-5 px-3 flex border-b border-gray4 last:border-0">
+                                    <a href="#" class="w-3/12">
+                                        <img src="images/temp/circle-post.png" alt="پست اول"
+                                            class="w-16 h-16 rounded-full duration-200 group-hover:brightness-50" />
+                                    </a>
+                                    <div class="content w-9/12">
+                                        <a href="#" title=" و ضامن  و ضامن">
+                                            <h3
+                                                class="line-clamp-3 text-black text-sm duration-200 group-hover:text-secondary">
+                                                بدون چک و ضامن و ضامن و ضامن و ضامن و ضامن، در همه شهرهای ایران وام عمل
+                                                بینی
+                                                بگیرید!
+                                            </h3>
+                                        </a>
+                                        <div class="flex items-center gap-2 text-gray2 pt-1">
+                                            <i class="icon-calendar3 w-3 h-3"></i>
+                                            <span class="text-sm">۲۰ تیر ۱۴۰۲</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- rents -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- main posts -->
+
+    <!-- footer -->
+    <footer class="bg-white mt-8 pt-12 border-t border-gray1">
+        <div class="container">
+            <div class="w-full flex flex-col lg:flex-row justify-between">
+
+                <div class="w-full lg:w-5/12 lg:w-4/12 mb-6 lg:mb-0">
+                    <img src="images/global/logo.png" alt="لندو" draggable="false" class="w-32 h-auto pb-6" />
+                    <p class="text-black text-sm pb-6">
+                        لندو در سال ۱۳۹۴ با نام ایران‌رنتر و با همکاری سه هم‌بنیانگذار تاسیس شد و در ابتدا به عنوان یک
+                        استارتاپ در زمینه اجاره وسایل و تجهیزات نمایشگاه فعالیت می‌کرد.
+                    </p>
+                    <ul class="list-none flex items-center justify-center lg:justify-start gap-7">
+                        <li>
+                            <a href="#" class="flex">
+                                <i class="icon-twitter w-6 h-6"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <i class="icon-telegram w-6 h-6"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <i class="icon-instagram w-6 h-6"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <i class="icon-aparat w-6 h-6"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full lg:w-5/12 lg:w-4/12">
+                    <p class="text-black text-xl font-extra pb-4">عضویت در خبرنامه</p>
+                    <p class="text-black text-sm pb-3">
+                        برای مطلع شدن از آخرین اخبار لندو پست الکترونیکی خود را در فرم زیر وارد نمایید
+                    </p>
+                    <form>
+                        <div class="newsletter bg-light4 rounded-10 p-3 flex items-center justify-between">
+                            <input type="text" placeholder="پست الکترونیکی" id="newsletter" name="newsletter"
+                                class="bg-transparent border-0 px-3 w-9/12 placeholder-gray3 text-secondary">
+                            <button type="submit"
+                                class="font-extra text-base text-white bg-green3 rounded-10 w-3/12 py-3">عضویت</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <hr class="mt-5 bg-light3" />
+
+            <div id="copyright" class="py-5 text-center text-sm text-black">
+                © 1402 - 1394 کپی از مطالب <b>لندو</b> تنها با کسب مجوز مکتوب امکان پذیر است.
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- imports -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- imports  -->
+
+</body>
+
+</html>

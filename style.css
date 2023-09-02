@@ -134,6 +134,10 @@ i[class*="icon-"] {
     background: url('images/icons/heart.svg');
 }
 
+.icon-left-arrow {
+    background: url('images/icons/arrow-left.svg');
+}
+
 /* icons */
 
 /* header */
@@ -161,6 +165,29 @@ header nav li.menu-item-has-children a span::after {
     background: url('images/icons/chevron-bottom.svg') no-repeat center center;
     background-size: cover;
     display: inline-flex;
+}
+
+header #archive-nav nav li.menu-item-has-children a span::after {
+    transition-duration: 200ms;
+}
+
+header #archive-nav nav li.menu-item-has-children:hover a span::after {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+header #archive-nav nav li a.hovered {
+    background-color: #0b2c6e;
+}
+
+header #archive-nav nav li a.hovered span {
+    color: #fff;
+}
+
+header #archive-nav nav li a.hovered i,
+header #archive-nav nav li a.hovered span::after {
+    filter: invert(1);
+    -webkit-filter: invert(1);
 }
 
 header ul.sub-menu::before {
