@@ -106,6 +106,34 @@ i[class*="icon-"] {
     background: url('images/icons/aparat.svg');
 }
 
+.icon-green-chevron-left {
+    background: url('images/icons/green-chevron-left.svg');
+}
+
+.icon-gray-linkedin {
+    background: url('images/icons/gray-linkedin.svg');
+}
+
+.icon-gray-telegram {
+    background: url('images/icons/gray-telegram.svg');
+}
+
+.icon-gray-twitter {
+    background: url('images/icons/gray-twitter.svg');
+}
+
+.icon-gray-whatsapp {
+    background: url('images/icons/gray-whatsapp.svg');
+}
+
+.icon-chevron-bottom {
+    background: url('images/icons/chevron-bottom.svg');
+}
+
+.icon-heart {
+    background: url('images/icons/heart.svg');
+}
+
 /* icons */
 
 /* header */
@@ -198,6 +226,81 @@ header ul.sub-menu::before {
 
 /* popular posts */
 
+/* single content */
+
+#single-content h2,
+#single-content h3,
+#single-content h4,
+#single-content h5,
+#single-content h6 {
+    font-family: 'vazirBold';
+    color: #000;
+}
+
+#single-content h2 {
+    font-size: 32px;
+    margin-top: 34px;
+}
+
+#single-content h3 {
+    font-size: 26px;
+    margin-top: 28px;
+}
+
+#single-content h4 {
+    font-size: 21px;
+    margin-top: 23px;
+}
+
+#single-content h5 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#single-content h6 {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+#single-content p {
+    color: #000;
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 16px;
+}
+
+#single-content a {
+    font-family: 'vazirBold';
+    color: #1b4381;
+    border-bottom: 1px solid #1b4381;
+}
+
+#single-content img {
+    margin: 16px 0px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#single-content img.aligncenter {
+    margin: 16px auto;
+    display: table;
+}
+
+#single-content ul {
+    padding: 16px;
+    list-style: disc;
+    line-height: 28px;
+}
+
+#single-content ol {
+    padding: 16px;
+    list-style: arabic-indic;
+    line-height: 28px;
+}
+
+/* single content */
+
 
 
 /* queries */
@@ -205,6 +308,27 @@ header ul.sub-menu::before {
 @media screen and (max-width: 767px) {
     .container {
         padding: 0px 1.5rem;
+    }
+
+    #single-content h2 {
+        font-size: 24px;
+    }
+
+    #single-content h3 {
+        font-size: 20px;
+    }
+
+    #single-content h4 {
+        font-size: 18px;
+    }
+
+    #single-content p {
+        font-size: 14px;
+    }
+
+    #single-content ul, #single-content ol {
+        font-size: 14px;
+        line-height: 28px;
     }
 }
 

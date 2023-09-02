@@ -98,4 +98,21 @@ $(document).ready(function () {
     }
   });
   //   mobile menu handler
+
+  //   single=> toc handler
+  $("#toc #opener").click(function() {
+    if($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $("#toc ul").addClass("max-h-0 opacity-0 py-0 invisible");
+        $("#toc ul").removeClass("max-h-[500px] opacity-100 py-5 visible");
+        $("#toc i").removeClass("rotate-180");
+    }
+    else {
+        $(this).addClass("active");
+        $("#toc ul").addClass("max-h-[500px] opacity-100 py-5 visible");
+        $("#toc ul").removeClass("max-h-0 opacity-0 py-0 invisible");
+        $("#toc i").addClass("rotate-180");
+    }
+  });
+  // single=> toc handler
 });
