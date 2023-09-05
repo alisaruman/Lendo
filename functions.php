@@ -14,4 +14,7 @@ add_action('init',function(){
 function time_to_read($p){
     return 0;
 }
+function get_likes($pid){
+    return 0;
+}
 ?>

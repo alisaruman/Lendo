@@ -32,7 +32,7 @@ foreach($posts as $p){
                                         </p>
                                         <div class="w-full flex items-center justify-between py-6">
                                             <div class="author flex items-center gap-2 lg:gap-4">
-                                                <?php echo get_avatar( get_the_author_meta( 'ID' ),64,"",get_the_author_meta('display_name'), array( 'class' => 'w-10 h-10 rounded-10' ) );  ?>
+                                                <?php echo get_avatar( get_the_author_meta('ID',$p->post_author),64,"",get_the_author_meta('display_name',$p->post_author), array( 'class' => 'w-10 h-10 rounded-10' ) );  ?>
                                                 <div class="flex flex-col">
                                                     <span class="text-gray3 text-sm"><?=get_the_author($p); ?></span>
                                                     <span class="text-gray2 text-xs">در <?=get_the_time("Y-m-d",$p ); ?></span>
