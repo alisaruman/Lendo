@@ -142,35 +142,9 @@ foreach($relateds as $rel){
                         </div>
                     </div>
 
-                    <div id="comments" class="pt-6 mb-5">
-                        <p class="text-base text-black font-extra py-3">نظر یا سوال خود را ثبت کنید</p>
-                        <form>
-                            <textarea name="subject" id="subject" placeholder="نظر شما"
-                                class="w-full bg-white p-3 rounded-10 border border-gray1 text-secondary text-sm placeholder-gray3 min-h-[200px] mb-3">
-                            </textarea>
-                            <input name="flname" id="flname" placeholder="نام و نام خانوادگی"
-                                class="w-full bg-white p-3 rounded-10 border border-gray1 text-secondary text-sm placeholder-gray3 mb-3" />
-                            <input name="email" id="email" placeholder="پست الکترونیکی"
-                                class="w-full bg-white p-3 rounded-10 border border-gray1 text-secondary text-sm placeholder-gray3 mb-3" />
-                            <div class="flex justify-end">
-                                <button type="submit"
-                                    class="font-extra text-base text-white bg-green3 rounded-10 w-40 py-3">ارسال
-                                    نظر</button>
-                            </div>
-                        </form>
-                    </div>
+                    
 
-                    <div id="comment" class="w-full py-8 px-5 bg-white rounded-10 shadow-main my-3">
-                        <div class="flex items-center gap-2">
-                            <span class="text-sm text-black font-extra">جلیل</span>
-                            <span class="text-xs text-gray2">۱۱ اردیبهشت ۱۴۰۲</span>
-                        </div>
-                        <p class="text-black text-sm text-justify leading-8">
-                            این وام را برای خرید اقساطی موبایل و وسایل الکترونیکی ضروری از طریق کارتی که در اختیار
-                            دارید، می‌توانید به صورت خرید اینترنتی یا از طریق دستگاه‌های کارتخوان مورد استفاده قرار
-                            دهید.
-                        </p>
-                    </div>
+                    <?php comments_template(); ?>
 
                 </div>
 

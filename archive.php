@@ -169,43 +169,8 @@ foreach($postss as $p){
                         </div>
 <?php } ?>
                     </div>
-
-                    <div id="pagination" class="w-full p-5 flex flex-wrap lg:flex-nowrap items-center justify-center gap-3 lg:gap-5 bg-white rounded-10 shadow-main mt-6">
-                        <a href="#" class="flex items-center gap-2">
-                            <i class="icon-left-arrow w-4 h-4 rotate-180"></i>
-                            <span class="text-sm text-gray3">قبلی</span>
-                        </a>
-                        <ul class="px-3 flex items-center border-l border-r border-gray1 gap-2 text-gray3 text-sm">
-                            <li>
-                                <a href="#"
-                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۱</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۲</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۳</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۴</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۵</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center justify-center rounded-10 w-5 md:w-8 h-5 md:h-8 duration-200 hover:bg-gray1">۶</a>
-                            </li>
-                        </ul>
-                        <a href="#" class="flex items-center gap-2">
-                            <span class="text-sm text-gray3">بعدی</span>
-                            <i class="icon-left-arrow w-4 h-4"></i>
-                        </a>
-                    </div>
+                    <?php page_navigation_f(); ?>
+                    
 
                     <!-- rent guide -->
                 </div>
