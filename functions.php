@@ -102,6 +102,12 @@ if( function_exists('acf_add_options_page') ) {
         'capability'    => 'edit_posts',
         'redirect'      => false
     ));
+    acf_add_options_sub_page(array(
+        'page_title'    => 'بنرهای تبلیغاتی',
+        'menu_title'    => 'بنرهای تبلیغاتی',
+        'parent_slug'   => 'lendo_settings',
+        'menu_slug'     => 'lendo_banners',
+    ));
 
 }
 ?>

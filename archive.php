@@ -1,16 +1,19 @@
 <?php get_header(); 
 $cat = get_term_by('id',get_queried_object_id(  ),"category");
 ?>
+<?php if(have_rows("banners","option")){ ?>
     <!-- archive banner -->
     <section id="archive-banner" class="pt-6">
         <div class="container">
-            <a href="#" target="_blank" rel="nofollow noopener">
-                <img src="<?=get_template_directory_uri(); ?>/images/temp/wide-banner2.jpg" alt="بنر" class="w-full h-auto" />
+<?php while(have_rows("banners","option")){ the_row(); ?>
+            <a href="<?php the_sub_field("url"); ?>" title="<?php the_sub_field("title"); ?>" target="_blank" rel="nofollow noopener">
+                <img src="<?php the_sub_field("pic"); ?>" alt="<?php the_sub_field("title"); ?>" class="w-full h-auto" />
             </a>
+<?php } ?>
         </div>
     </section>
     <!-- archive banner -->
-
+<?php } ?>
     <!-- slider -->
     <section id="slider" class="py-6">
         <div class="container">
