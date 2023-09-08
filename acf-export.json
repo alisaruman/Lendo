@@ -1,5 +1,119 @@
 [
     {
+        "key": "group_64fb491d35b1b",
+        "title": "بلوکهای صفحه اصلی",
+        "fields": [
+            {
+                "key": "field_64fb491d6256e",
+                "label": "بلوک ها",
+                "name": "blocks",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "سطر جدید",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_64fb494c6256f",
+                        "label": "عنوان",
+                        "name": "title",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_64fb491d6256e"
+                    },
+                    {
+                        "key": "field_64fb495462570",
+                        "label": "تعداد پست های قابل نمایش",
+                        "name": "limit",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_64fb491d6256e"
+                    },
+                    {
+                        "key": "field_64fb496262571",
+                        "label": "دسته بندی",
+                        "name": "cat",
+                        "aria-label": "",
+                        "type": "taxonomy",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "taxonomy": "category",
+                        "add_term": 0,
+                        "save_terms": 0,
+                        "load_terms": 0,
+                        "return_format": "id",
+                        "field_type": "checkbox",
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "parent_repeater": "field_64fb491d6256e"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "lendo_blocks"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
         "key": "group_64fb470e2e2a2",
         "title": "بنرهای تبلیغاتی",
         "fields": [

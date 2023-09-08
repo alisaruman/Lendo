@@ -103,6 +103,12 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false
     ));
     acf_add_options_sub_page(array(
+        'page_title'    => 'بلوک های صفحه اصلی',
+        'menu_title'    => 'بلوک های صفحه اصلی',
+        'parent_slug'   => 'lendo_settings',
+        'menu_slug'     => 'lendo_blocks',
+    ));
+    acf_add_options_sub_page(array(
         'page_title'    => 'بنرهای تبلیغاتی',
         'menu_title'    => 'بنرهای تبلیغاتی',
         'parent_slug'   => 'lendo_settings',

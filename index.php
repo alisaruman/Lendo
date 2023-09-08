@@ -193,7 +193,6 @@ foreach($posts as $p){ ?>
                         <div class="w-full">
                             <div class="item w-full bg-white rounded-10 shadow-main p-3">
                                 <a href="<?=get_permalink($p); ?>" title="<?=get_the_title($p); ?>">
-                                    <img src="images/temp/post1.png" alt="پست اول" class="" />
                                     <?=get_the_post_thumbnail($p,"thumbnail",array("class"=>"w-full h-auto rounded-10","alt"=>get_the_title($p))); ?>
                                 </a>
                                 <a href="<?=get_permalink($p); ?>" title="<?=get_the_title($p); ?>">
