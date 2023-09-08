@@ -71,9 +71,12 @@ the_post();
                             <i class="icon-chevron-bottom w-6 h-6 duration-200"></i>
                         </div>
                         <ul class="w-full list-none text-gray3 text-sm leading-9 duration-300 max-h-0 opacity-0 invisible py-0">
-                            <li class="cursor-pointer">آشنایی با بهترین وام اینترنتی در ایران </li>
-                            <li class="cursor-pointer">مزایای دریافت بهترین وام اینترنتی</li>
-                            <li class="cursor-pointer">چگونگی دریافت وام اینترنتی</li>
+<?php
+$titles = get_all_titles(get_the_content());
+for($i=0;$i<count($titles);$i++){
+?>
+                            <li class="cursor-pointer" data-ind="<?=$i; ?>"><?=strip_tags($titles[$i]); ?></li>
+<?php } ?>
                         </ul>
                     </div>
 
@@ -107,7 +110,7 @@ the_post();
                             </a>
 <?php } ?>
                         </div>
-                        <div class="flex items-center justify-end gap-2 cursor-pointer">
+                        <div class="flex items-center justify-end gap-2 cursor-pointer likeit" data-pid="<?=$post->ID; ?>">
                             <span class="text-sm text-black"><?=get_likes($post->ID); ?></span>
                             <i class="icon-heart w-6 h-6"></i>
                         </div>

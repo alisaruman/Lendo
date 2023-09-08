@@ -11,6 +11,7 @@
     <link href="<?=get_template_directory_uri(); ?>/output.css" rel="stylesheet" />
     <link href="<?=get_template_directory_uri(); ?>/style.css" rel="stylesheet" />
     <?php wp_head(); ?>
+    <script> var ajax_url = "<?=admin_url("admin-ajax.php"); ?>"; </script>
 </head>
 
 <body class="font-vazir m-0 p-0 bg-light1" dir="rtl">

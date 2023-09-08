@@ -65,7 +65,7 @@ class latest_widgets extends WP_Widget {
             </p>
             <p>
                 <label for="<?=$this->get_field_id( 'cat' ); ?>">دسته بندی</label>
-                <?php  wp_dropdown_categories( 'show_option_none=انتخاب دسته بندی&name='.$this->get_field_id( 'cat' ).'&selected='.(isset($instance[ 'cat' ]) ? $instance[ 'cat' ] : "0") ); ?>
+                <?php  wp_dropdown_categories( 'show_option_none=انتخاب دسته بندی&name='.$this->get_field_name( 'cat' ).'&selected='.(isset($instance[ 'cat' ]) ? $instance[ 'cat' ] : "0") ); ?>
             </p>
         <?php
     }

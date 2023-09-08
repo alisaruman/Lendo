@@ -70,7 +70,7 @@ foreach($posts as $p){
                         <a href="<?=get_permalink($p); ?>" title="<?=get_the_title($p); ?>">
                             <?=get_the_post_thumbnail($p,"medium",array("class"=>"w-full h-auto duration-200 group-hover:brightness-50","alt"=>get_the_title($p))); ?>
                             <div class="content w-full absolute bottom-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
-                                <span class="text-white text-xs py-1 px-3 rounded-10 bg-dark1 duration-200 group-hover:bg-primary"><?=$cat = get_the_category($p); echo $cat[0]->name; ?></span>
+                                <span class="text-white text-xs py-1 px-3 rounded-10 bg-dark1 duration-200 group-hover:bg-primary"><?php $cat = get_the_category($p); echo $cat[0]->name; ?></span>
                                 <h3 class="text-white text-sm font-extra mt-3"><?=get_the_title($p); ?></h3>
                             </div>
                         </a>
@@ -108,7 +108,7 @@ foreach($posts as $p){
 <?php } ?>
                                 <div class="flex items-center gap-1">
                                     <i class="icon-hourglass w-3 h-3"></i>
-                                    <span class="text-xs lg:text-sm text-gray2">مطالعه: <?=tiem_to_read($p); ?> دقیقه</span>
+                                    <span class="text-xs lg:text-sm text-gray2">مطالعه: <?=time_to_read($p); ?> دقیقه</span>
                                 </div>
                             </div>
                             <a href="<?=get_permalink($p); ?>" title="<?=get_the_title($p); ?>">

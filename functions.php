@@ -13,11 +13,18 @@ add_action('init',function(){
     ));
 });
 require_once(TEMPLATEPATH."/widgets.php");
+function my_word_count($str) {
+    $mystr = str_replace("\xC2\xAD",'', $str);        // soft hyphen encoded in UTF-8
+    return preg_match_all('~[\p{L}\'\-]+~u', $mystr); // regex expecting UTF-8
+}
 function time_to_read($p){
-    return 0;
+    $content = get_the_content($p);
+    $word_count = my_word_count($content);
+    $reading_time = ceil($word_count / 200);
+    return $reading_time;
 }
 function get_likes($pid){
-    return 0;
+    return number_format(get_post_meta($pid,"likes",true) ?: 0);
 }
 function page_navigation_f($pages = '', $range = 2){  
      $showitems = ($range * 2)+1;  
@@ -63,5 +70,38 @@ function lendo_comments($comment, $args, $depth) {
         </div>
     </div>
 <?php
+}
+function get_all_titles($cont){
+    preg_match_all("#<h2(.*)>(.*)<\/h2>#Us",$cont,$titles);
+    if(isset($titles[2]) && !empty($titles[2])){
+        return $titles[2];
+    }
+    return [];
+}
+function like_post(){
+    $pid = $_POST['pid'];
+    $likes = get_post_meta($pid,"likes",true) ?: 0;
+    if(!isset($_COOKIE['like_'.$pid])){
+        $likes += 1;
+        update_post_meta($pid,"likes",$likes);
+        setcookie("like_".$pid,"1",strtotime("+30 day"));
+    }
+    echo $likes;
+    die();
+}
+add_action("wp_ajax_like_post","like_post");
+add_action("wp_ajax_nopriv_like_post","like_post");
+
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title'    => 'تنظیمات قالب',
+        'menu_title'    => 'تنظیمات قالب',
+        'menu_slug'     => 'lendo_settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
 }
 ?>

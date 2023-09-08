@@ -123,4 +123,19 @@ $(document).ready(function () {
   }
   );
   //   archive nav hover handler
+
+  $("#toc li").click(function(){
+		var el = $("#single-content h2").eq($(this).data("ind"));
+		if(el.length > 0){
+			$([document.documentElement, document.body]).scrollTop(el.offset().top);
+		}
+  });
+  $(".likeit").click(function(){
+    var counter = $(this).find("span");
+    var dis = $(this);
+    $.post(ajax_url,{action:"like_post",pid:$(this).data("pid")},function(res){
+      counter.text(res);
+      dis.addClass("liked");
+    })
+  })
 });
